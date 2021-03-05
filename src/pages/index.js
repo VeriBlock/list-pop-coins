@@ -40,7 +40,7 @@ const IndexPage = ({data}) => {
         fontSize={{xs: 'h6.fontSize', sm: 'h4.fontSize', md: 'h3.fontSize'}}
         p={{xs: 2, sm: 3, md: 4}}
       >
-        List of POP-enabled coins
+        (Partial) List of POP-enabled coins
       </Box>
 
       <Grid container justify="center" spacing={3}>
