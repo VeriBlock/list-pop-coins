@@ -3,13 +3,13 @@ title: Placeholders
 date: 2021-03-05T11:43:30.941Z
 symbol: PHL
 network: Testnet
-docs: #
+docs: "https://wiki.veriblock.org/index.php/HowTo_PoP_PHL"
 github: https://github.com/VeriBlock/pop-bitc
 altchainid: 4276994270
 version: a9c491ef382ff13fbc127b7e7a5d28151154fe07
-win-artifacts: https://mirror1.veriblock.org/artifacts/bitc/Bitcash-master-8b26e5e-win64-qt.zip
-linux-artifacts: https://mirror1.veriblock.org/artifacts/bitc/Bitcash-master-8b26e5e-linux-x64.tar.gz
-mac-artifacts: #
+win-artifacts: "#"
+linux-artifacts: "#"
+mac-artifacts: "#"
 configname: placeh.conf
 config: |-
   ```

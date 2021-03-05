@@ -3,14 +3,14 @@ title: vBitcoin
 date: 2021-03-05T11:43:30.941Z
 symbol: vBTC
 network: Testnet
-docs: https://wiki.veriblock.org/index.php/HowTo_PoP_PEXA
-github: https://github.com/VeriBlock/pop-pexa
-altchainid: 50657861
-version: 0591be3618aeabe961798d98ec47da5407322f5f
-win-artifacts: #
-linux-artifacts: #
-mac-artifacts: #
-configname: pexa.conf
+docs: https://wiki.veriblock.org/index.php/HowTo_PoP_vBTC
+github: https://github.com/VeriBlock/vbk-ri-btc
+altchainid: 3860170
+version: f8ebbb26ce4873a4997e727b0af5a916f4d80552
+win-artifacts: https://mirror.veriblock.org/artifacts/vbtc/vBitcoin-develop-f8ebbb2-win64-qt.zip
+linux-artifacts: https://mirror.veriblock.org/artifacts/vbtc/vBitcoin-develop-f8ebbb2-linux-x64.tar.gz
+mac-artifacts: https://mirror.veriblock.org/artifacts/vbtc/vBitcoin-develop-f8ebbb2-macos-qt.zip
+configname: vbitcoin.conf
 config: |-
   ```
   testnet=1
@@ -20,7 +20,7 @@ config: |-
   rpcuser=vbtc
   rpcpassword=vbtc
   ```
-apm-artifact: https://mirror.veriblock.org/artifacts/apm/altchain-pop-miner-0.4.12-dev.13.zip
+apm-artifact: https://mirror.veriblock.org/artifacts/apm/altchain-pop-miner-0.4.12-dev.21.zip
 apmconfig: |-
   ```
   miner {
@@ -32,14 +32,14 @@ apmconfig: |-
   }
 
   securityInheriting {
-    pexa: {
+    btc: {
       // this can be set to [1,2,4]
       autoMineRounds: [1,2,4]
       payoutAddress: "<EXECUTE getnewaddress AND PASTE IT HERE>"
       family: btc
-      id: 50657861
-      name: "PEXA"
-      host: "http://localhost:18766"
+      id: 3860170
+      name: "vBitcoin"
+      host: "http://localhost:18332"
       auth: {
           username: "vbtc"
           password: "vbtc"

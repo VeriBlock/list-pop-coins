@@ -3,13 +3,13 @@ title: Bitcash
 date: 2021-03-05T11:43:30.941Z
 symbol: BITC
 network: Testnet
-docs: #
+docs: "#"
 github: https://github.com/VeriBlock/pop-bitc
 altchainid: 6076
 version: 8b26e5e694b22667191a4169592fd3c2bbdbde31
 win-artifacts: https://mirror1.veriblock.org/artifacts/bitc/Bitcash-master-8b26e5e-win64-qt.zip
 linux-artifacts: https://mirror1.veriblock.org/artifacts/bitc/Bitcash-master-8b26e5e-linux-x64.tar.gz
-mac-artifacts: #
+mac-artifacts: "#"
 configname: bitcash.conf
 config: |-
   ```

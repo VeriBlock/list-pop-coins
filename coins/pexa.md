@@ -1,16 +1,16 @@
 ---
-title: Bitcash
+title: Pexa
 date: 2021-03-05T11:43:30.941Z
-symbol: BITC
+symbol: PEXA
 network: Testnet
-docs: #
-github: https://github.com/VeriBlock/pop-bitc
+docs: 
+github: https://github.com/VeriBlock/pop-pexa
 altchainid: 6076
-version: 8b26e5e694b22667191a4169592fd3c2bbdbde31
-win-artifacts: https://mirror1.veriblock.org/artifacts/bitc/Bitcash-master-8b26e5e-win64-qt.zip
-linux-artifacts: https://mirror1.veriblock.org/artifacts/bitc/Bitcash-master-8b26e5e-linux-x64.tar.gz
-mac-artifacts: #
-configname: bitcash.conf
+version: 0591be3618aeabe961798d98ec47da5407322f5f
+win-artifacts: "#"
+linux-artifacts: "#"
+mac-artifacts: "#"
+configname: pexa.conf
 config: |-
   ```
   testnet=1
@@ -20,7 +20,7 @@ config: |-
   rpcuser=vbtc
   rpcpassword=vbtc
   ```
-apm-artifact: https://mirror.veriblock.org/artifacts/apm/altchain-pop-miner-0.4.12-dev.21.zip
+apm-artifact: https://mirror.veriblock.org/artifacts/apm/altchain-pop-miner-0.4.12-dev.13.zip
 apmconfig: |-
   ```
   miner {
