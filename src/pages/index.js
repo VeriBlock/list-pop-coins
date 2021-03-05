@@ -79,57 +79,60 @@ const IndexPage = ({data}) => {
                     <Link href={`https://github.com/veriblock/vbk-ri-btc/commit/${version}`}>{version}</Link>
                   </Typography>
 
-                  <Accordion>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreOutlined/>}
-                    >
-                      <Typography paragraph>Node</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Grid container>
-                        <Grid item xs={12}>
-                          <LinkIcon url={github} icon={<FaGithub/>} label={"Github"}/>
-                          <LinkIcon url={docs} icon={<FaWikipediaW/>} label={"Docs"}/>
-                          <LinkIcon url={win_artifacts} icon={<FaWindows/>} label={"Windows"}/>
-                          <LinkIcon url={linux_artifacts} icon={<FaLinux/>} label={"Linux"}/>
-                          <LinkIcon url={mac_artifacts} icon={<FaApple/>} label={"MacOS"}/>
+                  <Grid>
+                    <Accordion>
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreOutlined/>}
+                      >
+                        <Typography>Node</Typography>
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Grid container>
+                          <Grid item xs={12}>
+                            <LinkIcon url={github} icon={<FaGithub/>} label={"Github"}/>
+                            <LinkIcon url={docs} icon={<FaWikipediaW/>} label={"Docs"}/>
+                            <LinkIcon url={win_artifacts} icon={<FaWindows/>} label={"Windows"}/>
+                            <LinkIcon url={linux_artifacts} icon={<FaLinux/>} label={"Linux"}/>
+                            <LinkIcon url={mac_artifacts} icon={<FaApple/>} label={"MacOS"}/>
+                          </Grid>
+                          <Grid item xs={12}>
+                            <Typography paragraph>
+                              Sample {configname || "config"}:
+                            </Typography>
+                            <ReactMarkdown>
+                              {config}
+                            </ReactMarkdown>
+                          </Grid>
                         </Grid>
-                        <Grid item xs={12}>
-                          <Typography paragraph>
-                            Sample {configname || "config"}:
-                          </Typography>
-                          <ReactMarkdown>
-                            {config}
-                          </ReactMarkdown>
+                      </AccordionDetails>
+                    </Accordion>
+                    <Accordion>
+                      <AccordionSummary expandIcon={<ExpandMoreOutlined/>}>
+                        <Typography>
+                          APM
+                        </Typography>
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Grid container>
+                          <Grid item xs={12}>
+                            <LinkIcon url={"https://github.com/veriblock/nodecore"} icon={<FaGithub/>}
+                                      label={"Github"}/>
+                            <LinkIcon url={"https://wiki.veriblock.org/index.php/Altchain_PoP_Miner"}
+                                      icon={<FaWikipediaW/>} label={"Docs"}/>
+                            <LinkIcon url={apm_artifact} icon={<FaJava/>} label={"APM"}/>
+                          </Grid>
+                          <Grid item xs={12}>
+                            <Typography paragraph>
+                              Sample application.conf:
+                            </Typography>
+                            <ReactMarkdown>
+                              {apmconfig}
+                            </ReactMarkdown>
+                          </Grid>
                         </Grid>
-                      </Grid>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreOutlined/>}
-                    >
-                      <Typography paragraph>APM</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Grid container>
-                        <Grid item xs={12}>
-                          <LinkIcon url={"https://github.com/veriblock/nodecore"} icon={<FaGithub/>} label={"Github"}/>
-                          <LinkIcon url={"https://wiki.veriblock.org/index.php/Altchain_PoP_Miner"}
-                                    icon={<FaWikipediaW/>} label={"Docs"}/>
-                          <LinkIcon url={apm_artifact} icon={<FaJava/>} label={"APM"}/>
-                        </Grid>
-                        <Grid item xs={12}>
-                          <Typography paragraph>
-                            Sample application.conf:
-                          </Typography>
-                          <ReactMarkdown>
-                            {apmconfig}
-                          </ReactMarkdown>
-                        </Grid>
-                      </Grid>
-                    </AccordionDetails>
-                  </Accordion>
+                      </AccordionDetails>
+                    </Accordion>
+                  </Grid>
                 </CardContent>
               </Card>
             </Grid>
