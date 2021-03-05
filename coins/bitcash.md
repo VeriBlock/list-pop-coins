@@ -1,5 +1,5 @@
 ---
-title: Bitcash
+title: BitCash
 date: 2021-03-05T11:43:30.941Z
 symbol: BITC
 network: Testnet
