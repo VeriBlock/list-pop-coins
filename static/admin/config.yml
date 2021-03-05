@@ -2,6 +2,11 @@ backend:
   name: git-gateway
   branch: master
 
+#local_backend:
+#  # when using a custom proxy server port
+#  url: http://localhost:8082/api/v1
+
+
 media_folder: static/assets
 public_folder: /assets
 
@@ -10,13 +15,13 @@ collections:
     label: 'Coin'
     folder: 'coins'
     create: true
-    slug: 'coin'
+    slug: '{{title}}'
     media_folder: ''
     public_folder: ''
     editor:
       preview: false
     fields:
-      - { label: 'Name', name: 'name', widget: 'string', required: true, default: "Bitcoin" }
+      - { label: 'Name', name: 'title', widget: 'string', required: true, default: "Bitcoin" }
       - { label: 'Publish Date', name: 'date', widget: 'datetime', date_format: "DD.MM.YYYY" }
       - { label: 'Symbol', name: 'symbol', widget: 'string', required: true, default: "BTC" }
       - { label: 'Network Type', name: 'network', widget: 'string', required: true, default: "Testnet" }
@@ -24,7 +29,10 @@ collections:
       - { label: 'GitHub', name: 'github', widget: 'string', required: true, default: "http://github.com/bitcoin/bitcoin" }
       - { label: 'Altchain ID', name: 'altchainid', widget: 'number', required: true, default: 1337, min: 0, max: 18446744073709551615, value_type: int}
       - { label: 'Version', name: 'version', widget: 'string', required: true, default: "1.0.0" }
-      - { label: 'Artifacts', name: 'artifacts', widget: 'string', required: true, default: "https://github.com/bitcoin/bitcoin/archive/v0.21.0.zip" }
-      - { label: 'Sample Node config', name: 'config', widget: 'markdown', required: false }
-      - { label: 'Compatible APM artifact', name: 'apm-artifact', widget: 'string', required: true, default: "https://github.com/bitcoin/bitcoin/archive/v0.21.0.zip" }
-      - { label: 'Sample APM config', name: 'apmconfig', widget: 'markdown', required: false }
+      - { label: 'Windows artifact', name: 'win-artifacts', widget: 'string', required: false, default: "#" }
+      - { label: 'Linux artifact', name: 'linux-artifacts', widget: 'string', required: false, default: "#" }
+      - { label: 'MacOS artifact', name: 'mac-artifacts', widget: 'string', required: false, default: "#" }
+      - { label: 'Node config file name', name: 'configname', widget: 'stromg', default: 'vbitcoin.conf', required: true }
+      - { label: 'Sample Node config', name: 'config', widget: 'markdown', modes: ['raw'], required: false }
+      - { label: 'Compatible APM artifact', name: 'apm-artifact', widget: 'string', required: false, default: "#" }
+      - { label: 'Sample APM config', name: 'apmconfig', widget: 'markdown', modes: ['raw'],  required: false }

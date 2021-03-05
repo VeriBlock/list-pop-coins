@@ -4,10 +4,10 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-netlify-cms",
-    "gatsby-plugin-theme-ui",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-material-ui",
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
@@ -34,5 +34,14 @@ module.exports = {
       },
       __key: "pages",
     },
+      {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "coins",
+        path: `${__dirname}/coins/`,
+      },
+      __key: "coins",
+    },
+    `gatsby-transformer-remark`
   ],
 };
