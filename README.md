@@ -1,4 +1,4 @@
-# Kanban of altchains
+# Altchain adoption pipeline
 
 https://github.com/VeriBlock/list-pop-coins/projects/1
 
